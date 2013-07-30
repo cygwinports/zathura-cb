@@ -1,0 +1,14 @@
+--- origsrc/zathura-cb-0.1.1/config.mk	2013-05-12 16:28:56.000000000 -0500
++++ src/zathura-cb-0.1.1/config.mk	2013-07-30 13:41:12.279185600 -0500
+@@ -29,9 +29,10 @@ GIRARA_INC ?= $(shell pkg-config --cflag
+ GIRARA_LIB ?= $(shell pkg-config --libs girara-gtk${ZATHURA_GTK_VERSION})
+ 
+ ZATHURA_INC ?= $(shell pkg-config --cflags zathura)
++ZATHURA_LIB ?= $(shell pkg-config --libs zathura)
+ 
+ INCS = ${GIRARA_INC} ${GLIB_INC} ${ZATHURA_INC} ${LIBARCHIVE_INC}
+-LIBS = ${GIRARA_LIB} ${GLIB_LIB} ${LIBARCHIVE_LIB}
++LIBS = ${GIRARA_LIB} ${GLIB_LIB} ${LIBARCHIVE_LIB} ${ZATHURA_LIB}
+ 
+ # plugindir
+ PLUGINDIR ?= $(shell pkg-config --variable=plugindir zathura)
