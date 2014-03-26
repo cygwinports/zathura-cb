@@ -9,6 +9,9 @@ that mainly focuses on keyboard interaction."
 HOMEPAGE="http://pwmt.org/projects/zathura/plugins/"
 SRC_URI="http://pwmt.org/projects/zathura/plugins/download/${NAME}-${VERSION}.tar.gz"
 PATCH_URI="0.1.1-cygwin.patch"
+if defined ARCH_i686; then
+PATCH_URI+=" 0.1.1-libarchive-compat.patch"
+fi
 
 src_compile() {
 	lndirs
