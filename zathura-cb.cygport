@@ -1,17 +1,14 @@
 NAME="zathura-cb"
-VERSION=0.1.1
+VERSION=0.1.2
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="Comic book support for Zathura viewer"
 DESCRIPTION="zathura is a highly customizable and functional document viewer.
 It provides a minimalistic and space saving interface as well as an easy usage
 that mainly focuses on keyboard interaction."
-HOMEPAGE="http://pwmt.org/projects/zathura/plugins/"
+HOMEPAGE="http://pwmt.org/projects/zathura-cb/"
 SRC_URI="http://pwmt.org/projects/zathura/plugins/download/${NAME}-${VERSION}.tar.gz"
 PATCH_URI="0.1.1-cygwin.patch"
-if defined ARCH_i686; then
-PATCH_URI+=" 0.1.1-libarchive-compat.patch"
-fi
 
 src_compile() {
 	lndirs
