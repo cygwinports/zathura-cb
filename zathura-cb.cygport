@@ -1,5 +1,5 @@
 NAME="zathura-cb"
-VERSION=0.1.2
+VERSION=0.1.4
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="Comic book support for Zathura viewer"

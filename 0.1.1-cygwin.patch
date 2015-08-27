@@ -6,9 +6,9 @@
  ZATHURA_INC ?= $(shell pkg-config --cflags zathura)
 +ZATHURA_LIB ?= $(shell pkg-config --libs zathura)
  
- INCS = ${GIRARA_INC} ${GLIB_INC} ${ZATHURA_INC} ${LIBARCHIVE_INC}
--LIBS = ${GIRARA_LIB} ${GLIB_LIB} ${LIBARCHIVE_LIB}
-+LIBS = ${GIRARA_LIB} ${GLIB_LIB} ${LIBARCHIVE_LIB} ${ZATHURA_LIB}
+ INCS = ${GIRARA_INC} ${GDK_INC} ${GLIB_INC} ${ZATHURA_INC} ${LIBARCHIVE_INC}
+-LIBS = ${GIRARA_LIB} ${GDK_LIB} ${GLIB_LIB} ${LIBARCHIVE_LIB}
++LIBS = ${GIRARA_LIB} ${GDK_LIB} ${GLIB_LIB} ${ZATHURA_LIB} ${LIBARCHIVE_LIB}
  
  # plugindir
  PLUGINDIR ?= $(shell pkg-config --variable=plugindir zathura)
